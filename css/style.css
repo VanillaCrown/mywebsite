@@ -1,0 +1,83 @@
+.head {grid-area: header;}
+.sidebar {grid-area: sidebar;}
+.main {grid-area: main;}
+.footer {grid-area: footer;}
+
+
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+       'header header header'
+       'sidebar main main'
+       'footer footer footer';
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 250px auto 250px;
+    grid-template-areas:
+      "header header header"
+      "sidebar main main"
+      "footer footer footer";
+  }
+
+.grid-container > div {
+    background-color: pink;
+    /*text-align: left;*/
+        padding: 0px 0;
+    font-size:20px;
+    border: 1px solid black;
+  }
+
+ 
+
+h1 {
+  font-family: fantasy;
+  font-size: 1 px;
+  background-color: pink;
+  text-align: center;
+}
+
+h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+  }
+  to 
+    margin-left: 0%;
+  }
+
+
+
+
+  aside {
+    grid-area: sidebar;
+  }
+  
+  main {
+    grid-area: main;
+  }
+  
+  footer {
+   grid-area: footer;
+   background-color: pink;
+   font-family: fantasy;
+   font-size: 20px;
+   text-align: center;
+   padding: 10px;
+   
+  }
+
+.centered-paragraph {
+  position: sticky;
+  top: 50%;
+  bottom:50%;
+}
+
