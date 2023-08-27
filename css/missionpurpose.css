@@ -54,6 +54,12 @@
     }
 
 
+
+li {
+  font-weight: bold;
+  color:blue;
+}
+
   
   aside {
     grid-area: sidebar;
