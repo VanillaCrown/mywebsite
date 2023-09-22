@@ -64,8 +64,6 @@ h1 {
 
 
 
-
-
 h3 {
         font-family:fantasy;
         font-size: 5 px;
@@ -84,7 +82,7 @@ h3 {
    grid-area: footer;
    background-color: pink;
     font-family: fantasy;
-    font-size: 12px;
+    font-size: 20px;
     text-align: center;
     padding: 10px;
   }
@@ -105,4 +103,60 @@ h3 {
   body {
     background-color:white;
   }
+}
+
+ 
+
+/*slider settings*/
+#slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  width: 500px;
+  height: 400px;
+}
+
+#slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+#slider img.active {
+  opacity: 1;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #717171;
+  color: #f1f1f1;
+  font-size: 32px;
+  font-stretch: condensed;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  background-color: pink;
+}
+
+button#prev {
+  left: -5px;
+  padding: 7px 17px 7px 15px;
+}
+
+button#next {
+  right: -5px;
+  padding: 7px 15px 7px 17px;
 }
