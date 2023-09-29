@@ -1,3 +1,5 @@
+//javascript for image slider (about me section)
+
 const images = document.querySelectorAll('#slider img');
 const previousImage = document.getElementById("prev");
 const nextImage = document.getElementById("next");
