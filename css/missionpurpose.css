@@ -1,99 +1,119 @@
-.head {grid-area: header;}
-.sidebar {grid-area: sidebar;}
-.main {grid-area: main;}
-.footer {grid-area: footer;}
-
-
-
-
-.grid-container{
-    display: grid;
-    grid-template-areas:
-       'header header header'
-       'sidebar main main'
-       'footer footer footer';
+/*.flex-container {
+  display: flex;
+  height: auto;
+  align-items: center;
+  background-color: pink;
 }
 
-.grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-rows: 250px auto 250px;
-    grid-template-areas:
-      "header header header"
-      "sidebar main main"
-      "footer footer footer";
-  }
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 1000px;
+  margin: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+} 
 
-.grid-container > div {
-    background-color: pink;
-    /*text-align: left;*/
-        padding: 0px 0;
-    font-size:20px;
-    border: 1px solid black;
-  }
+img {
+  max-width:100%;
+  height: 100%;
+}
+*/
 
 
-  h1 {
-    font-family: fantasy;
-    font-size: 1 px;
-    background-color: pink;
-    text-align: center;
-  }
-
-
-  h1 {
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  @keyframes slidein {
-    from {
-      margin-left: 50%;
-    }
-    to 
-      margin-left: 0%;
-    }
-
-
-
-/*li {
-  font-weight: bold;
-  color:blue;
-}*/
-
-  
-  aside {
-    grid-area: sidebar;
-  }
-  
-  main {
-    grid-area: main;
-  }
-  
-  footer {
-   grid-area: footer;
-   background-color: pink;
-    font-family: fantasy;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-  }
-
-
-
-
-/*.centered-paragraph {
-  position: sticky;
-  top: 50%;
-  bottom:50%;
-}*/
-
-@media screen and (min-width: 480px) {
-  body {
-    background-color:white;
-  }
+/*header*/
+h1 {
+  font-family: fantasy;
+  font-size: 1 px;
+  background-color: pink;
+  text-align: center;
 }
 
+h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+  }
+  to 
+    margin-left: 0%;
+  }
 
 
 
 
+/*Mission and Purpose header fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  color: pink;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 3rem;
+  background-color: pink;
+  font-family: fantasy;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  color: #000;
+  background-color: pink;
+  font-family: fantasy;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.item:not(:first-child) {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.item__content {
+  background-color: pink;
+  color: #grey;
+  text-align: center;
+  padding: 7rem;
+  border-radius: 7px;
+}
+
+.item > p {
+  text-align: center;
+}
+
+.left {
+  transform-origin: left center;
+  transform: translateX(-50%);
+}
+
+.right {
+  transform-origin: right center;
+  transform: translateX(50%);
+}
+
+.slide-in {
+  opacity: 1 !important;
+  transform: translateX(0);
+}
