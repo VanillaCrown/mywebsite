@@ -1,37 +1,4 @@
-.head {grid-area: header;}
-.sidebar {grid-area: sidebar;}
-.main {grid-area: main;}
-.footer {grid-area: footer;}
 
-
-
-
-
-.grid-container{
-    display: grid;
-    grid-template-areas:
-       'header header header'
-       'sidebar main main'
-       'footer footer footer';
-}
-
-.grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-rows: 250px auto 250px;
-    grid-template-areas:
-      "header header header"
-      "sidebar main main"
-      "footer footer footer";
-  }
-
-.grid-container > div {
-    background-color: pink;
-    /*text-align: left;*/
-        padding: 0px 0;
-    font-size:20px;
-    border: 1px solid black;
-  }
 
 
   /* header {
@@ -49,7 +16,22 @@ h1 {
   text-align: center;
 }
 
+footer {
+  grid-area: footer;
+  background-color: pink;
+  font-family: fantasy;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  
+ }
 
+ body {
+  background-color: light pink;
+ }
+
+
+/*title animation*/
 h1 {
   animation-duration: 3s;
   animation-name: slidein;
@@ -64,39 +46,75 @@ h1 {
 
 
   
-  aside {
-    grid-area: sidebar;
-  }
-  
-  main {
-    grid-area: main;
-  }
-  
-  footer {
-   grid-area: footer;
-   background-color: pink;
-    font-family: fantasy;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-  }
+ 
 
+/* styling for form validation*/
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-/*.centered-paragraph {
-  position: sticky;
-  top: 50%;
-  bottom:50%;
-}*/
+#form-submitted-msg {
+  margin-bottom: 3rem;
+  border-radius: 3px;
+  background-color: rgb(67, 161, 67);
+  padding: 0.5rem;
+  width: 40%;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
 
-@media screen and (min-width: 480px) {
-  body {
-    background-color:white;
-  }
+#exampleForm {
+  width: 40%;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group:not(.radio):not(.checkbox) {
+  gap: 0.25rem;
+  flex-direction: column;
+}
+
+.input-group:not(.radio):not(.checkbox) input {
+  width: 100%;
+  border-radius: 0.375rem !important;
 }
 
 
+legend {
+  font-size: 1rem;
+  width: max-content;
+}
 
+.form-btns {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
 
+.form-btns > button {
+  padding: 0.3rem 1.5rem;
+}
 
+.form-btns > .submit {
+  padding-inline: 3rem;
+}
+
+.error-msg {
+  display: none;
+}
