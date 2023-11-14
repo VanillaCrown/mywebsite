@@ -121,5 +121,8 @@ legend {
 
 /*leaflet map styling*/
 #map {
-  align: center;
+  width: 50%;
+  margin: ;
+  position: relative;
+  left: 40%;
 }
