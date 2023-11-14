@@ -16,6 +16,10 @@ h1 {
   text-align: center;
 }
 
+h6 {
+  text-align: center;
+}
+
 footer {
   grid-area: footer;
   background-color: pink;
@@ -113,4 +117,9 @@ legend {
 
 .error-msg {
   display: none;
+}
+
+/*leaflet map styling*/
+#map {
+  align: center;
 }
